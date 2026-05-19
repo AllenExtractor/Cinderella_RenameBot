@@ -15,7 +15,7 @@
 
 ## Botfather Commands
 ```
-start - Bot Alive Cheking
+start - Bot Alive Cheking.
 view_thumb - View Thumbnail
 del_thumb - Delete Thumbnail
 set_caption - Set A Custom Caption
