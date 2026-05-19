@@ -48,13 +48,13 @@ Tʜɪs Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛs Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ
 
     ABOUT_TXT = """<b>╭───────────⍟
 • ᴍy ɴᴀᴍᴇ : {}
-• ᴘʀᴏɢʀᴀᴍᴇʀ : <a href=https://t.me/sewxiy>ᴍɪᴋᴇʏ</a>
-• ɴᴇᴛᴡᴏʀᴋ : <a href=https://t.me/otakuflix_network>ᴏᴛᴀᴋᴜғʟɪx</a> 
-• ᴍᴏᴠɪᴇs : <a href=https://t.me/movieflix_original>ᴍᴏᴠɪᴇғʟɪx</a>
-• sᴇʀɪᴇs : <a href=https://t.me/seriesflix_original>sᴇʀɪᴇsғʟɪx</a>
-• ᴀɴɪᴍᴇ: <a href=https://t.me/anime_cruise_netflix>ᴀɴɪᴍᴇ ᴄʀᴜɪsᴇ</a>
-• ᴄʜᴀᴛ ɢʀᴏᴜᴘ: <a href=https://t.me/weebzonex>ᴡᴇᴇʙᴢᴏɴᴇ</a>
-• ᴍʏ ꜱᴇʀᴠᴇʀ : <a href=https://codeflix_bots>ᴠᴘs</a>
+• 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫 : <a href=https://t.me/SmartBoy_ApnaMS>𝐌𝐒 𝐁𝐫𝐨</a>
+• 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐫 : <a href=https://t.me/Lapata_786>𝐌𝐚𝐡𝐢𝐫𝐚</a> 
+• 𝐎𝐰𝐧𝐞𝐫 : <a href=https://t.me/MR_Toxic_1>𝐇𝐚𝐫𝐬𝐡</a>
+• 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 : <a href=https://t.me/CinderellaContactBot>𝐂𝐢𝐧𝐝𝐞𝐫𝐞𝐥𝐥𝐚</a>
+• 𝐁𝐫𝐨𝐭𝐡𝐞𝐫: <a href=https://t.me/Mk_khan001>𝐌𝐊 𝐁𝐫𝐨</a>
+• 𝐁𝐫𝐨𝐭𝐡𝐞𝐫: <a href=https://t.me/SunilChoudhary08>𝐒𝐊 𝐁𝐫𝐨</a>
+• 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐫 : <a href=https://codeflix_bots>𝐒𝐡𝐢𝐯𝐢</a>
 ╰───────────────⍟ """
 
     HELP_TXT = """
@@ -78,7 +78,7 @@ Exᴀᴍᴩʟᴇ:- <code> /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 <b>•></b> Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nɴᴀᴍᴇ \nAɴᴅ Aᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].           
 
 
-<b>➜ ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> <a href=https://t.me/otakuflix_network>ᴏᴛᴀᴋᴜғʟɪx</a>
+<b>➜ ᴘᴏᴡᴇʀᴇᴅ ʙʏ:</b> <a href=https://t.me/teamcinderella>𝐓𝐞𝐚𝐦 𝐂𝐢𝐧𝐝𝐞𝐫𝐞𝐥𝐥𝐚</a>
 """
 
     SEND_METADATA = """
@@ -86,9 +86,9 @@ Exᴀᴍᴩʟᴇ:- <code> /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 
 ☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
 
-◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @team_netflix" -metadata author="@Codeflix_bots" -metadata:s:s title="Subtitled By :- @Team_netflix" -metadata:s:a title="By :- @team_netflix" -metadata:s:v title="By:- @Codeflix_bots" </code>
+◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @CinderellaContactBot" -metadata author="@Cinderella_BusinessID" -metadata:s:s title="Subtitled By :- @CinderellaContactBot" -metadata:s:a title="By :- @CinderellaContactBot" -metadata:s:v title="By:- @Cinderella_BusinessID" </code>
 
-📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @Codeflix_bots
+📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @CinderellaContactBot
 """
 
     PROGRESS_BAR = """<b>\n
