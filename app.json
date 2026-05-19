@@ -1,7 +1,7 @@
 {
-  "name": "Snow Renamer Bot",
+  "name": "Cinderella Renamer Bot",
   "description": "Telegram File Renamer Bot ",
-  "logo": "https://graph.org/file/f47f124a14461141f7b26.jpg",
+  "logo": "https://graph.org/file/3f0529e0a232d7a076a60-998260a13c34d2b7ea.jpg",
   "keywords": [
     "Renamer Bot",
     "Mongo DB",
@@ -10,7 +10,7 @@
     "Rename",
     "File Rename"
   ],
-  "repository": "https://github.com/Codeflix-Bots/ProRenameBot",
+  "repository": "https://github.com/AllenExtractor/Cinderella_RenameBot",
   "success_url": "",
   "stack": "container",
   "env": {
