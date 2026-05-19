@@ -8,16 +8,16 @@ async def add_caption(client, message):
         return await message.reply_text("**__Gɪᴠᴇ Tʜᴇ Cᴀᴩᴛɪᴏɴ__\n\nExᴀᴍᴩʟᴇ:- `/set_caption {filename}\n\n💾 Sɪᴢᴇ: {filesize}\n\n⏰ Dᴜʀᴀᴛɪᴏɴ: {duration}`**")
     caption = message.text.split(" ", 1)[1]
     await db.set_caption(message.from_user.id, caption=caption)
-    await message.reply_text("__**✅ Cᴀᴩᴛɪᴏɴ Sᴀᴠᴇᴅ**__", reply_to_message_id=message.id)
+    await message.reply_text("**✅ Cᴀᴩᴛɪᴏɴ Sᴀᴠᴇᴅ**", reply_to_message_id=message.id)
 
 
 @Client.on_message(filters.private & filters.command('del_caption'))
 async def delete_caption(client, message):
     caption = await db.get_caption(message.from_user.id)
     if not caption:
-        return await message.reply_text("__**😔 Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Cᴀᴩᴛɪᴏɴ**__")
+        return await message.reply_text("**🙆🏿‍♀️ Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Cᴀᴩᴛɪᴏɴ**")
     await db.set_caption(message.from_user.id, caption=None)
-    await message.reply_text("__**❌️ Cᴀᴩᴛɪᴏɴ Dᴇʟᴇᴛᴇᴅ**__")
+    await message.reply_text("**❌️ Cᴀᴩᴛɪᴏɴ Dᴇʟᴇᴛᴇᴅ**")
 
 
 @Client.on_message(filters.private & filters.command(['see_caption', 'view_caption']))
@@ -26,7 +26,7 @@ async def see_caption(client, message):
     if caption:
         await message.reply_text(f"**Yᴏᴜ'ʀᴇ Cᴀᴩᴛɪᴏɴ:-**\n\n`{caption}`")
     else:
-        await message.reply_text("__**😔 Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Cᴀᴩᴛɪᴏɴ**__")
+        await message.reply_text("**🙆🏿‍♀️ Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Cᴀᴩᴛɪᴏɴ**")
 
 
 @Client.on_message(filters.private & filters.command(['view_thumb', 'viewthumb']))
@@ -35,17 +35,17 @@ async def viewthumb(client, message):
     if thumb:
         await client.send_photo(chat_id=message.chat.id, photo=thumb)
     else:
-        await message.reply_text("😔 __**Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Tʜᴜᴍʙɴᴀɪʟ**__")
+        await message.reply_text("🙆🏿‍♀️ **Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Tʜᴜᴍʙɴᴀɪʟ**")
 
 
 @Client.on_message(filters.private & filters.command(['del_thumb', 'delthumb']))
 async def removethumb(client, message):
     await db.set_thumbnail(message.from_user.id, file_id=None)
-    await message.reply_text("❌️ __**Tʜᴜᴍʙɴᴀɪʟ Dᴇʟᴇᴛᴇᴅ**__")
+    await message.reply_text("❌️**Tʜᴜᴍʙɴᴀɪʟ Dᴇʟᴇᴛᴇᴅ**")
 
 
 @Client.on_message(filters.private & filters.photo)
 async def addthumbs(client, message):
     SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
     await db.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)
-    await SnowDev.edit("✅️ __**Tʜᴜᴍʙɴᴀɪʟ Sᴀᴠᴇᴅ**__")
+    await SnowDev.edit("✅️ **Tʜᴜᴍʙɴᴀɪʟ Sᴀᴠᴇᴅ**")
