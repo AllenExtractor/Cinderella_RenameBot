@@ -11,16 +11,16 @@ from time import sleep
 async def start(client, message):
 
     if message.from_user.id in Config.BANNED_USERS:
-        await message.reply_text("Sorry, You are banned.")
+        await message.reply_text("Sorry dude, You are banned😒.")
         return
 
     user = message.from_user
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            '⛅ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/codeflix_bots'),
+            '⛅ ᴜᴘᴅᴀᴛᴇs', url='https://t.me/teamcinderella'),
         InlineKeyboardButton(
-            '🌨️ sᴜᴘᴘᴏʀᴛ', url='https://t.me/weebs_support')
+            '🌨️ sᴜᴘᴘᴏʀᴛ', url='https://t.me/Cinderella_Support')
     ], [
         InlineKeyboardButton('❄️ ᴀʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('❗ ʜᴇʟᴘ', callback_data='help')
@@ -65,9 +65,9 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    '⛅ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/codeflix_bots'),
+                    '⛅ Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/teamcinderella'),
                 InlineKeyboardButton(
-                    '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/weebs_support')
+                    '🌨️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Cinderella_Support')
             ], [
                 InlineKeyboardButton('❄️ ᴀʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('❗ ʜᴇʟᴘ', callback_data='help')
