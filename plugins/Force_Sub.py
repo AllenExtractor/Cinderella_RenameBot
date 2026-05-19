@@ -11,26 +11,29 @@ async def not_subscribed(_, client, message):
     try:             
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id) 
         if user.status == enums.ChatMemberStatus.BANNED:
-            return True 
+            return True  # banned user → block karo
         else:
-            return False                
+            return False  # joined & not banned → allow karo
     except UserNotParticipant:
         pass
-    return True
+    return True  # not joined → block karo
 
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def forces_sub(client, message):
     buttons = [[InlineKeyboardButton(text="📢 ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴍʏ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/{Config.FORCE_SUB}") ]]
     text = "**sᴏʀʀʏ ᴅᴜᴅᴇ ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ ᴍʏ ᴄʜᴀɴɴᴇʟ sᴏ ᴘʟᴇᴀsᴇ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ😁**"
+    
     try:
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id)    
-        if user.status == enums.ChatMemberStatus.BANNED:                                   
-            return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")  
-    except UserNotParticipant:                       
+        if user.status == enums.ChatMemberStatus.BANNED:
+            # User banned hai → banned message do
+            return await client.send_message(message.from_user.id, text="Sᴏʀʀy Yᴏᴜ'ʀᴇ Bᴀɴɴᴇᴅ Tᴏ Uꜱᴇ Mᴇ")
+        else:
+            # User joined & not banned → yahan KABHI nahi aana chahiye
+            # (not_subscribed ne already False return kar diya hoga)
+            # Agar kisi race condition se yahan aa bhi gaye, toh message forward karo
+            return await message.continue_propagation()
+    except UserNotParticipant:
+        # User joined nahi → join karne ka message do
         return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
-    return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
-          
-
-
-
