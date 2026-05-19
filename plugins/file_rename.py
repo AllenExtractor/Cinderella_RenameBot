@@ -91,6 +91,7 @@ async def doc(bot, update):
         return await update.message.edit(f"⚠️Something went wrong can't able to set Prefix or Suffix ☹️ \n\n❄️ Contact to Us -> @CinderellaContactBot\n\nError: {e}")
 
     file_path = f"downloads/{new_filename}"
+    metadata_path = f"Metadata/{new_filename}"  # FIX: always define metadata_path upfront
     file = update.message.reply_to_message
 
     ms = await update.message.edit("Tʀyɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅɪɴɢ")
@@ -102,7 +103,6 @@ async def doc(bot, update):
     _bool_metadata = await db.get_metadata(update.message.chat.id)
 
     if (_bool_metadata):
-        metadata_path = f"Metadata/{new_filename}"
         metadata = await db.get_metadata_code(update.message.chat.id)
         if metadata:
 
@@ -218,12 +218,13 @@ async def doc(bot, update):
                 await bot.delete_messages(from_chat, mg_id)
 
         except Exception as e:
-            os.remove(file_path)
-            if ph_path:
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            if ph_path and os.path.exists(ph_path):
                 os.remove(ph_path)
-            if metadata_path:
+            if os.path.exists(metadata_path):
                 os.remove(metadata_path)
-            if path:
+            if path and os.path.exists(path):
                 os.remove(path)
             return await ms.edit(f" Eʀʀᴏʀ {e}")
 
@@ -259,20 +260,21 @@ async def doc(bot, update):
                     progress=progress_for_pyrogram,
                     progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
         except Exception as e:
-            os.remove(file_path)
-            if ph_path:
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            if ph_path and os.path.exists(ph_path):
                 os.remove(ph_path)
-            if metadata_path:
+            if os.path.exists(metadata_path):
                 os.remove(metadata_path)
-            if path:
+            if path and os.path.exists(path):
                 os.remove(path)
             return await ms.edit(f" Eʀʀᴏʀ {e}")
 
     await ms.delete()
 
-    if ph_path:
+    if ph_path and os.path.exists(ph_path):
         os.remove(ph_path)
-    if file_path:
+    if file_path and os.path.exists(file_path):
         os.remove(file_path)
-    if metadata_path:
+    if os.path.exists(metadata_path):
         os.remove(metadata_path)
