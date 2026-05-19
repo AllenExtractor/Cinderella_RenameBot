@@ -7,27 +7,27 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID = os.environ.get("API_ID", "")  # ⚠️ Required
-    API_HASH = os.environ.get("API_HASH", "")  # ⚠️ Required
+    API_ID = os.environ.get("API_ID", "38498066")  # ⚠️ Required
+    API_HASH = os.environ.get("API_HASH", "c9696114751feacdeb1b4487f5839a1a")  # ⚠️ Required
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "")  # ⚠️ Required
 
     # premium 4g renaming client
-    STRING_API_ID = os.environ.get("STRING_API_ID", "")
-    STRING_API_HASH = os.environ.get("STRING_API_HASH", "")
+    STRING_API_ID = os.environ.get("STRING_API_ID", "33853339")
+    STRING_API_HASH = os.environ.get("STRING_API_HASH", "d44e3a158d9da849df318173268f94c0")
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
 
     # database config
     DB_NAME = os.environ.get("DB_NAME", "Cluster0")
-    DB_URL = os.environ.get("DB_URL", "")  # ⚠️ Required
+    DB_URL = os.environ.get("DB_URL", "mongodb+srv://m49606145_db_user:Th15V5nu9utMejwO@cluster0.g11tftt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")  # ⚠️ Required
 
     # other configs
     BOT_UPTIME = time.time()
-    START_PIC = os.environ.get("START_PIC", "")
+    START_PIC = os.environ.get("START_PIC", "https://graph.org/file/3f0529e0a232d7a076a60-998260a13c34d2b7ea.jpg")
     ADMIN = [int(admin) if id_pattern.search(
-        admin) else admin for admin in os.environ.get('ADMIN', '').split()]  # ⚠️ Required
+        admin) else admin for admin in os.environ.get('ADMIN', '8446475678').split()]  # ⚠️ Required
     
-    FORCE_SUB = os.environ.get("FORCE_SUB", "") # ⚠️ Required Username without @
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))  # ⚠️ Required
+    FORCE_SUB = os.environ.get("FORCE_SUB", "teamcinderella") # ⚠️ Required Username without @
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "https://t.me/log_channel_cinderellarename"))  # ⚠️ Required
     FLOOD = int(os.environ.get("FLOOD", '10'))
     BANNED_USERS = set(int(x) for x in os.environ.get(
         "BANNED_USERS", "1234567890").split())
