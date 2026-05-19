@@ -55,7 +55,7 @@ async def delete_suffix(client, message):
     if not suffix:
         return await SnowDev.edit("__**😔 ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴀɴʏ ꜱᴜꜰꜰɪx**__")
     await db.set_suffix(message.from_user.id, None)
-    await SnowDev.edit("__**❌️ ꜱᴜꜰꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
+    await SnowDev.edit("__**❌️ꜱᴜꜰꜰɪx ᴅᴇʟᴇᴛᴇᴅ**__")
 
 
 @Client.on_message(filters.private & filters.command('see_suffix'))
