@@ -50,11 +50,11 @@ Tʜɪs Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛs Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ
 • ᴍy ɴᴀᴍᴇ : {}
 • 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐞𝐫 : <a href=https://t.me/SmartBoy_ApnaMS>𝐌𝐒 𝐁𝐫𝐨</a>
 • 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐫 : <a href=https://t.me/Lapata_786>𝐌𝐚𝐡𝐢𝐫𝐚</a> 
-• 𝐎𝐰𝐧𝐞𝐫 : <a href=https://t.me/MR_Toxic_1>𝐇𝐚𝐫𝐬𝐡</a>
+• 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐫 : <a href=tg://openmessage?user_id=8480660521>𝐒𝐡𝐢𝐯𝐢</a>
 • 𝐂𝐨𝐧𝐭𝐚𝐜𝐭 : <a href=https://t.me/CinderellaContactBot>𝐂𝐢𝐧𝐝𝐞𝐫𝐞𝐥𝐥𝐚</a>
 • 𝐁𝐫𝐨𝐭𝐡𝐞𝐫: <a href=https://t.me/Mk_khan001>𝐌𝐊 𝐁𝐫𝐨</a>
 • 𝐁𝐫𝐨𝐭𝐡𝐞𝐫: <a href=https://t.me/SunilChoudhary08>𝐒𝐊 𝐁𝐫𝐨</a>
-• 𝐒𝐮𝐩𝐩𝐨𝐫𝐭𝐞𝐫 : <a href=https://codeflix_bots>𝐒𝐡𝐢𝐯𝐢</a>
+• 𝐎𝐰𝐧𝐞𝐫 : <a href=https://t.me/MR_Toxic_1>𝐇𝐚𝐫𝐬𝐡</a>
 ╰───────────────⍟ """
 
     HELP_TXT = """
@@ -86,7 +86,7 @@ Exᴀᴍᴩʟᴇ:- <code> /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ: {filename}
 
 ☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
 
-◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @CinderellaContactBot" -metadata author="@Cinderella_BusinessID" -metadata:s:s title="Subtitled By :- @CinderellaContactBot" -metadata:s:a title="By :- @CinderellaContactBot" -metadata:s:v title="By:- @Cinderella_BusinessID" </code>
+◦ <code> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By:- @CinderellaContactBot" -metadata author="@MR_Toxic_1" -metadata:s:s title="Subtitled By :- @Lapata_786" -metadata:s:a title="By :- @Mk_khan001" -metadata:s:v title="By:- @SunilChoudhary08" </code>
 
 📥 Fᴏʀ Hᴇʟᴘ Cᴏɴᴛ. @CinderellaContactBot
 """
