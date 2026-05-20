@@ -99,4 +99,5 @@ async def cb_handler(client, query: CallbackQuery):
         except:
             await query.message.delete()
     else:
+        # Koi aur callback hai (rename, upload_*, metadata_*) - aage pass karo
         await query.continue_propagation()

@@ -5,7 +5,10 @@ from config import Config
 from helper.database import db
 
 async def not_subscribed(_, client, message):
-    await db.add_user(client, message)
+    try:
+        await db.add_user(client, message)
+    except:
+        pass
     if not Config.FORCE_SUB:
         return False
     # /start command ko exempt karo taki user join button dekh sake
@@ -19,6 +22,8 @@ async def not_subscribed(_, client, message):
             return False  # joined & not banned → allow karo
     except UserNotParticipant:
         pass
+    except Exception:
+        return False
     return True  # not joined → block karo
 
 

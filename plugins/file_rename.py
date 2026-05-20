@@ -73,9 +73,11 @@ async def refunc(client, message):
 @Client.on_callback_query(filters.regex("upload"))
 async def doc(bot, update):
 
-    # Creating Directory for Metadata
+    # Creating Directory for Metadata and Downloads
     if not os.path.isdir("Metadata"):
         os.mkdir("Metadata")
+    if not os.path.isdir("downloads"):
+        os.mkdir("downloads")
 
     # Extracting necessary information
     prefix = await db.get_prefix(update.message.chat.id)
