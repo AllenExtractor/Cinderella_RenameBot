@@ -8,6 +8,9 @@ async def not_subscribed(_, client, message):
     await db.add_user(client, message)
     if not Config.FORCE_SUB:
         return False
+    # /start command ko exempt karo taki user join button dekh sake
+    if message.command and message.command[0] == "start":
+        return False
     try:             
         user = await client.get_chat_member(Config.FORCE_SUB, message.from_user.id) 
         if user.status == enums.ChatMemberStatus.BANNED:
