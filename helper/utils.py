@@ -89,15 +89,18 @@ def convert(seconds):
 
 async def send_log(b, u):
     if Config.LOG_CHANNEL is not None:
-        curr = datetime.now(timezone("Asia/Kolkata"))
-        date = curr.strftime("%d %B, %Y")
-        time_str = curr.strftime("%I:%M:%S %p")
-        await b.send_message(
-            Config.LOG_CHANNEL,
-            f"**--Nᴇᴡ Uꜱᴇʀ Sᴛᴀʀᴛᴇᴅ Tʜᴇ Bᴏᴛ--**\n\n"
-            f"Uꜱᴇʀ: {u.mention}\nIᴅ: `{u.id}`\nUɴ: @{u.username}\n\n"
-            f"Dᴀᴛᴇ: {date}\nTɪᴍᴇ: {time_str}\n\nBy: {b.mention}",
-        )
+        try:
+            curr = datetime.now(timezone("Asia/Kolkata"))
+            date = curr.strftime("%d %B, %Y")
+            time_str = curr.strftime("%I:%M:%S %p")
+            await b.send_message(
+                Config.LOG_CHANNEL,
+                f"**--Nᴇᴡ Uꜱᴇʀ Sᴛᴀʀᴛᴇᴅ Tʜᴇ Bᴏᴛ--**\n\n"
+                f"Uꜱᴇʀ: {u.mention}\nIᴅ: `{u.id}`\nUɴ: @{u.username}\n\n"
+                f"Dᴀᴛᴇ: {date}\nTɪᴍᴇ: {time_str}\n\nBy: {b.mention}",
+            )
+        except Exception as e:
+            print(f"send_log error: {e}")
 
 def add_prefix_suffix(input_string, prefix='', suffix=''):
     pattern = r'(?P<filename>.*?)(\.\w+)?$'
