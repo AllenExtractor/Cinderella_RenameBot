@@ -45,10 +45,6 @@ class Bot(Client):
                 logging.warning(e)
                 logging.warning("Make Sure Bot admin in force sub channel")
                 self.force_channel = None
-        app = web.AppRunner(await web_server())
-        await app.setup()
-        bind_address = "0.0.0.0"
-        await web.TCPSite(app, bind_address, Config.PORT).start()
         logging.info(f"{me.first_name} ✅✅ BOT started successfully ✅✅")
 
         for id in Config.ADMIN:
@@ -73,6 +69,13 @@ class Bot(Client):
 bot_instance = Bot()
 
 async def main():
+    # Web server PEHLE start karo - Render health check ke liye zaroori
+    web_app = web.AppRunner(await web_server())
+    await web_app.setup()
+    bind_address = "0.0.0.0"
+    await web.TCPSite(web_app, bind_address, Config.PORT).start()
+    logging.info(f"Web server started on port {Config.PORT}")
+
     if Config.STRING_SESSION:
         await asyncio.gather(
             app.start(),
