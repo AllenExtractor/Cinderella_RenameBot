@@ -2,7 +2,7 @@ import re
 import os
 import time
 
-id_pattern = re.compile(r'^.\d+$')
+id_pattern = re.compile(r'^-?\d+$')
 
 
 class Config(object):
